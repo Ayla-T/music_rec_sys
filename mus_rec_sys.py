@@ -17,13 +17,14 @@ from nltk.stem.porter import PorterStemmer
 
 stemmer = PorterStemmer()
 
-def = token(txt):
+def token(txt):
     token = nltk.word_tokenize(txt)
     a = [stemmer.stem(w) for w in token]
     return " ".join(a)
 
-#from sklearn.feature_extraction.text import TfidfVectorizer
-#from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-#tfid = TfidfVectorizer(analyzer='word', stop_words='english')
-#matrix = tfid.fit_transform(df['text'])
+tfid = TfidfVectorizer(analyzer='word', stop_words='english')
+matrix = tfid.fit_transform(df['text'])
+
