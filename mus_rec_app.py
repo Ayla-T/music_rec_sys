@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("spotify_millsongdata.csv")
+df = pd.read_csv("top_10000_1960-now.csv")
 
 # Data Cleaning
 df = df.drop('link', axis=1).reset_index(drop=True)
