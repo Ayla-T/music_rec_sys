@@ -3,7 +3,7 @@ import pandas as pd
 df = pd.read_csv("top_10000_1960-now.csv")
 
 # Data Cleaning
-df = df.drop('link', axis=1).reset_index(drop=True)
+#df = df.drop('link', axis=1).reset_index(drop=True)
 
 # Sampling
 df = df.sample(5000)
